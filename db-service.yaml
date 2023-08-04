@@ -1,0 +1,11 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: db-service
+spec:
+  selector:
+    app: vprodb
+  ports:
+  - port: 3306
+    targetPort: 3306
+    protocol: TCP
